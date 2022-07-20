@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- SECTION -->
+  <section class="showcase">
+    <header>
+      <h2 class="logo">Your Logo Here</h2>
+      <img class="logo-image" src="images/fivem-logo.jpg">
+    </header>
+    <div class="overlay"></div>
+    <div class="text">
+      <h2>MODERN FIVEM </h2> 
+      <h3>LOADING SCREEN</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.</p>
+      <p>Press <b>[E]</b> to Stop Music.</p>
+      <a href="#">JOIN OUR DISCORD</a>
+    </div>
+  </section>
+
+  <!-- VIDEO EMBED -->
+  <div class="video-background">
+    <iframe class="videoContainer__video" height="100%" width="180%" src="https://www.youtube.com/embed/f1MAEDPcUC0?playlist=f1MAEDPcUC0&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;loop=1&amp;mute=1" frameborder="0"></iframe>
+  </div>
+
+  <!-- DISCORD WIDGET -->
+  <!-- <div class="discord-widget">
+    <iframe src="https://discord.com/widget?id=999285012975321148&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+  </div> -->
+
+<!-- MUSIC -->
+<script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-73378277-10'); </script>
+<audio id="music" src="music/music.mp3" autoplay="true" hidden="true" loop="true"/>
+<script>
+
+var play = false;
+var myAudio = document.getElementById("music");
+
+myAudio.volume = 0.9;
+
+function onKeyDown(event) {
+    switch (event.keyCode) {
+        case 69: //E BUTTON        
+            if (play) {
+                myAudio.pause();
+                play = false;
+            } else {
+                myAudio.play();
+                play = true;
+            }
+            break;
+    }
+return false;
+}
+window.addEventListener("keydown", onKeyDown, false);
+</script>
+</body>
+</html>
