@@ -14,6 +14,7 @@ body
     color:white;
 	overflow:hidden;
 	font-weight: bold;
+  cursor: url("/images/cursor.png"), auto;
 }
 header
 {
@@ -31,6 +32,10 @@ header
 {
   color: #fff;
   text-transform: uppercase;
+}
+.cursors
+{
+  cursor: pointer;
 }
 .video-background{
   position: absolute;
